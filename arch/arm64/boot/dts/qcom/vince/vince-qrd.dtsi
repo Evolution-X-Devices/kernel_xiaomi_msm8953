@@ -448,35 +448,6 @@
 	};
 };
 
-&spmi_bus {
-	qcom,pmi8950@2 {
-		qcom,leds@a100 {
-			/delete-property/ status;
-			/delete-node/ qcom,led_mpp_2;
-		};
-	};
-	qcom,pm8953@0 {
-		qcom,leds@a100 {
-			status = "okay";
-			compatible = "qcom,leds-qpnp";
-			reg = <0xa100 0x100>;
-			label = "mpp";
-			qcom,led_mpp_2 {
-				label = "mpp";
-				linux,name = "button-backlight";
-				linux,default-trigger = "none";
-				qcom,default-state = "off";
-				qcom,max-current = <10>;
-				qcom,current-setting = <5>;
-				qcom,id = <6>;
-				qcom,mode = "manual";
-				qcom,source-sel = <1>;
-				qcom,mode-ctrl = <0x61>;
-			};
-		};
-	};
-};
-
 / {
 	qrd_batterydata: qcom,battery-data {
 		qcom,batt-id-range-pct = <5>;

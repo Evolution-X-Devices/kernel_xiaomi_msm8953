@@ -104,9 +104,8 @@ printk("reset gpio : %d\n", bdata->reset_gpio);
 			dev_err(dev, "%s: Unable to read synaptics,power-on-state property\n",
 					__func__);
 			return retval;
-		} else {
-			bdata->power_on_state = value;
 		}
+		bdata->power_on_state = value;
 	} else {
 		bdata->power_gpio = -1;
 	}
@@ -119,9 +118,8 @@ printk("reset gpio : %d\n", bdata->reset_gpio);
 			dev_err(dev, "%s: Unable to read synaptics,power-delay-ms property\n",
 					__func__);
 			return retval;
-		} else {
-			bdata->power_delay_ms = value;
 		}
+		bdata->power_delay_ms = value;
 	} else {
 		bdata->power_delay_ms = 0;
 	}
@@ -136,18 +134,16 @@ printk("reset gpio : %d\n", bdata->reset_gpio);
 			dev_err(dev, "%s: Unable to read synaptics,reset-on-state property\n",
 					__func__);
 			return retval;
-		} else {
-			bdata->reset_on_state = value;
 		}
+		bdata->reset_on_state = value;
 		retval = of_property_read_u32(np, "synaptics,reset-active-ms",
 				&value);
 		if (retval < 0) {
 			dev_err(dev, "%s: Unable to read synaptics,reset-active-ms property\n",
 					__func__);
 			return retval;
-		} else {
-			bdata->reset_active_ms = value;
 		}
+		bdata->reset_active_ms = value;
 	} else {
 		bdata->reset_gpio = -1;
 	}
@@ -160,9 +156,8 @@ printk("reset gpio : %d\n", bdata->reset_gpio);
 			dev_err(dev, "%s: Unable to read synaptics,reset-delay-ms property\n",
 					__func__);
 			return retval;
-		} else {
-			bdata->reset_delay_ms = value;
 		}
+		bdata->reset_delay_ms = value;
 	} else {
 		bdata->reset_delay_ms = 0;
 	}
@@ -175,9 +170,8 @@ printk("reset gpio : %d\n", bdata->reset_gpio);
 			dev_err(dev, "%s: Unable to read synaptics,max-y-for-2d property\n",
 					__func__);
 			return retval;
-		} else {
-			bdata->max_y_for_2d = value;
 		}
+		bdata->max_y_for_2d = value;
 	} else {
 		bdata->max_y_for_2d = -1;
 	}
@@ -194,9 +188,8 @@ printk("reset gpio : %d\n", bdata->reset_gpio);
 			dev_err(dev, "%s: Unable to read synaptics,ub-i2c-addr property\n",
 					__func__);
 			return retval;
-		} else {
-			bdata->ub_i2c_addr = (unsigned short)value;
 		}
+		bdata->ub_i2c_addr = (unsigned short)value;
 	} else {
 		bdata->ub_i2c_addr = -1;
 	}

@@ -127,7 +127,7 @@
 			vituralsar,irq-gpio = <&tlmm 130 0x2008>;
 		};
 		synaptics_dsx@20 {
-			compatible = "synaptics,dsx-i2c";
+			compatible = "td4310_mi8953-i2c";
 			reg = <0x20>;
 			interrupt-parent = <&tlmm>;
 			interrupts = <65 0x2>;
@@ -363,7 +363,7 @@
 				};
 			};
 		synaptics_dsx@70 {
-			compatible = "synaptics_lansi,dsx-i2c";
+			compatible = "td4310_mi8953_lansi-i2c";
 			reg = <0x70>;
 			interrupt-parent = <&tlmm>;
 			interrupts = <65 0x2>;

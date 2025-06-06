@@ -597,7 +597,7 @@ MODULE_DEVICE_TABLE(i2c, synaptics_rmi4_id_table);
 #ifdef CONFIG_OF
 static struct of_device_id synaptics_rmi4_of_match_table[] = {
 	{
-		.compatible = "td4310_mi8953-i2c",
+		.compatible = "td4310-vince-i2c",
 	},
 	{},
 };
